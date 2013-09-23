@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+  <title>ktap project</title>
+
+  <link rel="stylesheet" href="http://www.ktap.org/bootstrap.min.css">
+  <link rel="stylesheet" href="http://www.ktap.org/codemirror.css">
+  <link rel="stylesheet" href="http://www.ktap.org/style.css">
+  <link rel="shortcut icon" href="http://www.ktap.org/logo/favicon.ico">
+  <link rel="stylesheet" href="google-code-prettify/prettify.css">
+  <script src="google-code-prettify/prettify.js"></script>
+</head>
+
+
+<body onload="prettyPrint()">
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Sidebar -->
+      <div id="nav" class="span3">
+	<img id="logo" src="./logo/ktap.png" alt="ktap logo">
+	<ul class="unstyled menu">
+          <li class="menu-header">Documentation
+            <ul>
+              <li><div class="doc-rev">Trunk</div>
+                <ul class="docs">
+                  <li><a href="http://doc.ktap.org/doc/master/tutorial.html">Tutorial</a></li>
+                  <li><a href="http://doc.ktap.org/doc/master/ktap.html">Manual</a></li>
+                  <li><a href="http://doc.ktap.org/doc/master/std/index.html">Standard</a> |
+                      <a href="http://doc.ktap.org/doc/master/extra/index.html">Extra</a></li>
+                </ul>
+              </li>
+              <li><a href="http://github.com/ktap/ktap/wiki/Docs">Other docs</a></li>
+            </ul>
+          </li>
+	  <li class="menu-header">Releases
+        <ul>
+          <li class="release"><a href="https://github.com/ktap/ktap/blob/release-0.2/RELEASES.txt">0.7, July 3 2013</a>
+			<ul>
+			  <li>[<a href="http://github.com/ktap/ktap/dist/ktap-0.2.tar.gz">.tar.gz</a>]
+			  </li>
+			</ul>
+	      </li>
+        </ul>
+	  </li>
+          <li class="menu-header">Mailing lists
+            <ul>
+              <li><a href="https://freelists.org/ktap">ktap-dev</a></li>
+            </ul>
+          </li>
+	  <li class="menu-header">Other resources
+	    <ul>
+              <li><a href="http://github.com/ktap/ktap">GitHub</a></li>
+	    </ul>
+	  </li>
+	</ul>
+      </div> <!-- #nav -->
+
+      <!-- Main content -->
+      <div id="main" class="span13">
+
+	<h1>ktap <small>A lightweight scripting dynamic tracing tool for Linux</small></h1>
+
+	<p>
+	  ktap is a new scripting dynamic tracing tool for Linux, 
+	  it uses a scripting language and lets users trace the Linux kernel dynamically. 
+	  ktap is designed to give operational insights with interoperability that allows 
+	  users to tune, troubleshoot and extend kernel and application. It's similar with Linux Systemtap and Solaris Dtrace.
+	</p>
+
+	<p>
+	  ktap has different design principles from Linux mainstream dynamic tracing 
+	  language in that it's based on bytecode, so it doesn't depend upon GCC, 
+	  doesn't require compiling kernel module for each script, safe to use in 
+	  production environment, fulfilling the embedded ecosystem's tracing needs.
+	</p>
+
+
+	<div class="row">
+	  <div class="span3"><h2>A short summary of features</h2></div>
+	  <div class="span10">
+	    <table id="features">
+	      <tbody><tr><td>Simple</td><td>simple but powerful scripting language</td></tr>
+	      <tr><td>Fast</td><td>register based interpreter (heavily optimized) in Linux kernel</td></tr>
+	      <tr><td>Lightweight</td><td>small and lightweight (6KLOC of interpreter)</td></tr>
+	      <tr><td>Compilation</td><td>not depend on gcc for each script running</td></tr>
+	      <tr><td>Embedded</td><td>easy to use in embedded environment without debugging info</td></tr>
+	      <tr><td>Tracing</td><td>support for tracepoint, kprobe, uprobe, function trace, timer and more</td></tr>
+	      <tr><td>Architecture</td><td>supported in x86, arm, ppc, mips</td></tr>
+	      <tr><td>Safety</td><td>safety in sandbox</td></tr>
+	      <tr><td>License</td><td>GPL v2</td></tr>
+	    </tbody></table>
+	  </div> <!-- .span10 -->
+	</div> <!-- .row -->
+
+
+	<div class="row">
+	  <div class="span3"><h2>A very small taste of what it looks like</h2></div>
+
+	  <div class="span10">
+            <pre class="prettyprint">
+#/usr/bin/env ktap
+
+#trace all syscalls in system
+trace syscalls:* {
+  print(cpu(), pid(), execname(), argevent)
+}
+            </pre>
+          </div> <!-- .span10 -->
+	</div> <!-- .row -->
+      </div> <!-- #main -->
+
+    </div> <!-- .row -->
+  </div> <!-- #container -->
+</body></html>

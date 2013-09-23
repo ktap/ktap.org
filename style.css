@@ -1,0 +1,56 @@
+div.container {
+    margin-top: 30px;
+}
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h2 {
+    padding-top: 7px;
+    font-size: 14px;
+}
+table {
+    padding: 10px;
+}
+#features td {
+    padding: 5px;
+    border: none;
+}
+pre {
+    padding: 15px;
+}
+#logo {
+    margin: 0px 30px 30px 0px;
+}
+
+ul.menu {
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+}
+ul.menu li {
+    list-style: none;
+    margin-bottom: .2em;
+}
+ul.menu li.menu-header {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+ul.menu li.menu-header>ul {
+    margin-top: 1em;
+    margin-left: 0em;
+    padding-left: 0em;
+}
+ul.menu li.release>ul {
+    margin-left: 1em;
+}
+ul.menu li.release>ul>li {
+    display: inline;
+}
+div.doc-rev {
+    float: left;
+    display: inline;
+}
+ul.docs {
+    margin-left: 3em;
+    margin-bottom: 1em;
+}
