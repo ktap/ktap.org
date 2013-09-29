@@ -54,3 +54,9 @@ ul.docs {
     margin-left: 3em;
     margin-bottom: 1em;
 }
+a.github-ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+}
